@@ -19,3 +19,637 @@ h3 {
 i {
     color: #0080ff;
 }
+    
+    html, body{
+    margin: 0;
+    font-size: 16px;
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+
+/*
+GENERAL*/
+i {
+    color: #0065FC ;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #0065FC;
+    transition: all 0.4s;
+}
+
+
+#hebergementSearch, #hebergementGeneral, #menu, #activiteGeneral{
+    margin: 30px;
+}
+@media screen and (max-width: 768px) {
+     #hebergementGeneral{
+        margin: 0px;
+    }
+}
+
+
+/*MENU*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav div ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+   /* margin: 30px;*/
+}
+
+nav div ul li {
+    list-style: none;
+    padding: 30px;
+
+}
+
+#menu_left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+  .hoverUp:hover{
+    
+    border-top: solid 2px #0065FC ;
+    color: #0065FC ;
+    transition: all 0.2s;
+
+  }
+
+  .hoverUp:hover a {
+    color: #0065FC ;
+    transition: all 0.2s;
+  }
+
+
+  /*BERSION RESPONSIVE NAVIGATION BAR */
+  @media screen and (max-width: 768px) {
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    nav ul{
+        padding: 0;
+    }
+    #logo{
+        width: 30%;
+        text-align: center;
+    }
+}
+
+  /*SEARCH BAR*/
+
+
+form{
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    width: 100% ;
+    justify-content: flex-start;
+}
+
+  label{
+    background-color: #F2F2F2;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#localisation{
+    background-color: white;
+    border: solid 1px rgb(218, 218, 218);
+    padding: 20px;
+    width: 250px;
+}
+
+::placeholder{
+    font-weight: 600;
+    color: black;
+    font-size : 18px
+}
+
+form button{
+    color: white;
+    padding: 18px;
+    background-color:#0065FC ;
+    border:none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+form button i{
+    display: none !important;
+}
+  /*
+  RESPONSIVE LA SEARCH BAR*/
+
+@media screen and (max-width: 768px) {
+    form{
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #hebergementSearch #p_special, h1{
+        text-align: center;
+    }
+    #buttonRechercher{
+        visibility: hidden;
+        display: none;
+    }
+
+    #hebergementSearch form button i{
+        color: white;
+      
+        display: block !important;
+    }
+
+    
+}
+
+
+/*
+CODE CSS POUR LES FILTRES*/
+#filtres{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+#filterNoCenter{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.filtreName{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    height: 50px;
+    border-radius: 40px;
+    border: solid 2px rgb(201, 201, 201);
+    font-weight: 600;
+    margin: 0px 20px 0px 20px ;
+}
+
+.filtreName p{
+    padding: 0px 15px 0px 15px;
+    z-index: 0;
+}
+.filtreName i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius:40px;
+    background-color:#DEEBFF ;
+    color: #0065FC ;
+    z-index: 1;
+   
+}
+
+.filtreName:before {
+    content: "";
+    border-radius: 40px;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    background-color: #0065FC;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
+  }
+  
+  .filtreName:hover:before {
+      visibility: visible;
+      width: 100%;
+      height:100%;  
+    }
+
+    .filtreName:hover p {
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+      /*
+     RESPONSIVE PARTIE FILTRE*/
+    @media screen and (max-width: 768px) {
+      #filterNoCenter{
+          width: 100%;
+        
+      }
+      #filtres{
+          width: 100%;
+          justify-content: start;
+      }
+
+      .filtreName{
+        margin: 0px 30px 10px 0px;
+      }
+    }
+
+    /*
+    CSS INFO*/
+#info{
+    display: flex;
+    align-items: center;
+    margin:30px
+}
+
+#info i{
+    color: #0065FC;
+    padding: 5px;
+    border-radius: 20px;
+    height: 18px;
+    border: solid 2px#d6d6d6;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+#info p {
+    padding-left: 10px;
+}
+
+/*HEBERGEMENT
+*/
+
+
+
+#hebergementGeneral{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+#hebergement{
+    background-color:#F2F2F2 ;
+    padding: 35px;
+    border-radius: 20px;
+   width: 60%;
+}
+
+#hebergement h2 {
+    padding-left: 20px;
+}
+
+#hebergementPopulaire{
+    background-color:#F2F2F2 ;
+    padding: 35px;
+    border-radius: 20px;
+   width: 30%;
+}
+
+#titlePopulaire i{
+    font-size: 30px;
+    color: black;
+}
+
+.priceBold{
+    font-weight: 600;
+}
+
+.annonceLigne{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.annonce{
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(218, 219, 235);
+
+}
+
+
+.imgUn{
+    background-image: url(img/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+}
+
+.imgDeux{
+    background-image: url(img/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+}
+
+.imgTrois{
+    background-image: url(img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+}
+
+.imgQuatre{
+    background-image: url(img/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+}
+
+.imgCinq{
+    background-image: url(img/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+}
+
+.imgSix{
+    background-image: url(img/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+}
+
+.imgSept{
+    background-image: url(img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+}
+
+.imgHuit{
+    background-image: url(img/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+}
+
+.imgNeuf{
+    background-image: url(img/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+}
+
+.imgUn, .imgDeux, .imgTrois, .imgQuatre, .imgCinq, .imgSix{
+    margin: 5px;
+    width: 275px;
+    height: 150px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 18px 18px 0px 0px;
+    
+}
+
+.annonceInfo h3{
+    margin: 0;
+}
+
+.annonceInfo p{
+    margin: 5px;
+}
+.annonceInfo{
+    margin: 15px
+}
+
+
+.annonceColonne{
+    display: flex;
+    flex-direction: column;
+}
+.annoncePopulaire{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(218, 219, 235);
+
+}
+
+.annonceInfoPopulaire{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.annonceInfoPopulaire h3{
+    margin: 0;
+}
+
+#titlePopulaire{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+#titlePopulaire h2{
+    margin: 0;
+}
+
+.imgSept, .imgHuit, .imgNeuf{
+    width: 250px;
+    height: auto;
+    background-size:cover;
+    border-radius: 18px 0px 0px 18px;
+    margin: 5px;
+}
+
+ /*
+  RESPONSIVE HEBERGEMENT
+ */
+
+
+
+/*
+  CODE CSS POUR ACTIVITE
+*/
+#activite{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.activiteBox{
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width:100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(218, 219, 235);
+
+}
+
+.boxLinkActiviteBox{
+    width: 20%;
+}
+
+.activiteBoxSmall{
+    /*margin: 20px 20px;*/
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(218, 219, 235);
+    margin-bottom: 40px;
+}
+
+.activiteBoxExtraSmall{
+    /*margin: 20px 20px;*/
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(218, 219, 235);
+}
+
+.activiteImgUn{
+    background-image: url(img/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+}
+.activiteImgDeux{
+    background-image: url(img/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+}
+.activiteImgTrois{
+    background-image: url(img/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+}
+
+.activiteImgQuatre{
+    background-image: url(img/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+}
+
+.activiteImgCinq{
+        background-image: url(img/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+    }
+
+.activiteImgSix{
+    background-image: url(img/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+}
+/*LARGE*/
+.activiteImgUn, .activiteImgQuatre{
+    
+    width: 100%;
+    height: 450px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 18px 18px 0px 0px;
+}
+
+/*SMALL*/
+.activiteImgDeux, .activiteImgCinq{
+    width: 100%;
+    height: 250px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 18px 18px 0px 0px;
+  
+}
+
+.activiteImgTrois, .activiteImgSix{
+    width: 100%;
+    height: 200px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 18px 18px 0px 0px;
+}
+
+.activiteInfo{
+
+    margin: 15px
+}
+.activiteInfo h3{
+    margin: 0
+}
+
+
+#plusInfo{
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+/*
+RESPONSIVE PARTIE ACTIVITE*/
+@media screen and (max-width: 768px) {
+
+.activiteBox, .activiteBoxExtraSmall, .activiteBoxSmall, .smallBox{
+    width: 100%;
+  
+}
+.activiteBox, .activiteBoxExtraSmall, .activiteBoxSmall{
+    height: 250px;
+    margin: 20px 0px;
+}
+
+.boxLinkActiviteBox{
+    width: 100%;
+}
+
+#plusInfo{
+    margin-top: 20px;
+}
+    
+}
+
+/*FOOTER
+*/
+
+footer{
+    display: flex;
+   
+    flex-direction: row;
+   padding-left: 30px;
+    align-items: center;
+    height: 200px;
+    background-color:#F2F2F2 ; 
+
+}
+
+
+.footerInfo{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    width: 500px;
+    
+}
+
+/*
+RESPONSIVE FOOTER
+*/
+
+@media screen and (max-width: 768px) {
+
+    footer{
+        height:100% ;
+        flex-direction: column;
+    }
+    .footerInfo{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    
+        
+    }
