@@ -1,1 +1,21 @@
-lol
+body{
+    margin: 5%
+    color: blue;
+    font-family: 'Raleway', sans-serif;
+
+h1 {
+    font-size: 120%;
+    margin: 20
+}
+
+h2 {
+    font-size: 100%;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+i {
+    color: #0065FC;
+}
